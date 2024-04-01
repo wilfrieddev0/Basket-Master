@@ -62,4 +62,4 @@ Les outils de développement utilisés sont les suivants :
 - Gestion de code source :  Git/GitHub
   
 **Requis**
-  Cle API de Google Gmail
+  Cle API de Google Gmail sous forme d'un fichier JSON à mettre dans le repertoire "src/main/resources"
