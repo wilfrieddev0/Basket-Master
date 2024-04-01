@@ -60,3 +60,6 @@ Les outils de développement utilisés sont les suivants :
 - Gestionnaire de dépendances : Maven
 - Service de Mail :  Gmail API
 - Gestion de code source :  Git/GitHub
+  
+**Requis**
+  Cle API de Google Gmail
