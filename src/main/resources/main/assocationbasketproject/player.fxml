@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="887.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.assocationbasketproject.Player">
+   <children>
+      <VBox layoutX="599.0" layoutY="23.0" />
+      <Pane layoutX="27.0" layoutY="60.0" prefHeight="207.0" prefWidth="572.0" style="-fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 10 10 0 10;">
+         <children>
+            <Circle fx:id="circleProfile" fill="WHITE" layoutX="99.0" layoutY="104.0" radius="85.0" stroke="BLACK" strokeMiterLimit="0.0" strokeType="INSIDE" strokeWidth="0.0" style="-fx-stroke-width: 2;" styleClass="cover-image">
+               <effect>
+                  <DropShadow />
+               </effect></Circle>
+            <HBox layoutX="217.0" layoutY="16.0" spacing="5.0">
+               <children>
+                  <VBox prefHeight="175.0" prefWidth="157.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="238.0" text="Nom : " />
+                        <Label prefHeight="31.0" prefWidth="238.0" text="Age :" />
+                        <Label prefHeight="31.0" prefWidth="238.0" text="Position" />
+                        <Label prefHeight="31.0" prefWidth="238.0" text="Size / Weight (cm/kg) : " />
+                        <Label prefHeight="31.0" prefWidth="238.0" text="Team : " />
+                        <Label layoutX="10.0" layoutY="154.0" prefHeight="31.0" prefWidth="238.0" text="Category : " />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="175.0" prefWidth="161.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="lName" prefHeight="31.0" prefWidth="238.0" text="Specimen">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lAge" prefHeight="31.0" prefWidth="238.0" text="18">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font></Label>
+                        <Label fx:id="lPosition" prefHeight="31.0" prefWidth="238.0" text="Point Guard">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lSize" prefHeight="31.0" prefWidth="161.0" text="1.89 / 82">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lTeam" prefHeight="31.0" prefWidth="238.0" text="Team A">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lCategory" layoutX="10.0" layoutY="154.0" prefHeight="31.0" prefWidth="238.0" text="U18">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <TabPane layoutX="20.0" layoutY="283.0" prefHeight="430.0" prefWidth="848.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="In few figures">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.36492890995260663" layoutX="10.0" layoutY="78.0" orientation="VERTICAL" prefHeight="213.0" prefWidth="828.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="103.0" prefWidth="193.0">
+                                 <children>
+                                    <StackPane layoutX="108.0" layoutY="-34.0" prefHeight="63.0" prefWidth="616.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="39.0" prefWidth="304.0" text="Statistical averages">
+                                             <font>
+                                                <Font name="System Bold" size="31.0" />
+                                             </font></Label>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <HBox layoutX="202.0" layoutY="15.0" prefHeight="129.0" prefWidth="616.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-61.0" layoutY="-61.0" prefHeight="61.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label text="Matchs">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-51.0" layoutY="-61.0" prefHeight="60.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label fx:id="lMatchs" text="45.4">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" layoutX="10.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-61.0" layoutY="-61.0" prefHeight="61.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label text="Points" />
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-51.0" layoutY="-61.0" prefHeight="60.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label fx:id="lPoints" text="45.4">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" layoutX="523.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-61.0" layoutY="-61.0" prefHeight="61.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label text="Assits">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-51.0" layoutY="-61.0" prefHeight="60.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label fx:id="lAssits" text="10.4">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" layoutX="10.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-61.0" layoutY="-61.0" prefHeight="61.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label text="Rebounds" />
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane prefHeight="60.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label fx:id="lRebounds" text="2.4">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" layoutX="538.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-61.0" layoutY="-61.0" prefHeight="61.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label text="Steals" />
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-51.0" layoutY="-61.0" prefHeight="60.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label fx:id="lSteals" text="1.4">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" layoutX="549.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-61.0" layoutY="-61.0" prefHeight="61.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label text="Blocks" />
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-51.0" layoutY="-61.0" prefHeight="60.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label fx:id="lBlocks" text="0.2">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" layoutX="523.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-61.0" layoutY="-61.0" prefHeight="61.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label text="Fields Goals(%)" />
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-51.0" layoutY="-61.0" prefHeight="60.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label fx:id="lFieldsGoals" text="45.4">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" layoutX="538.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-61.0" layoutY="-61.0" prefHeight="61.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label text="Accuracy from Downtown(%)" />
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-51.0" layoutY="-61.0" prefHeight="60.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label fx:id="lAccuracy" text="45.4">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font></Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                          <SplitPane dividerPositions="0.5" layoutX="113.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-61.0" layoutY="-61.0" prefHeight="61.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label text="Victories" />
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <StackPane layoutX="-51.0" layoutY="-61.0" prefHeight="60.0" prefWidth="121.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Label fx:id="lVictory" text="45.4">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </StackPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="All matchs">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="10.0" layoutY="4.0" prefHeight="394.0" prefWidth="828.0" spacing="10.0">
+                           <children>
+                              <Pane prefHeight="102.0" prefWidth="825.0" style="-fx-border-style: solid; -fx-border-radius: 5; -fx-border-color: gray;">
+                                 <children>
+                                    <VBox layoutX="35.0" layoutY="16.0" prefHeight="68.0" prefWidth="174.0" spacing="5.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="68.0" text="From" />
+                                          <DatePicker fx:id="dFrom" prefHeight="31.0" prefWidth="174.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="505.0" layoutY="22.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="68.0" text="Key word" />
+                                          <TextField fx:id="fWords" prefHeight="31.0" prefWidth="149.0" promptText="Entrer any key word" />
+                                       </children>
+                                    </VBox>
+                                    <Button fx:id="btnGo" layoutX="729.0" layoutY="40.0" mnemonicParsing="false" onAction="#searchStats" prefHeight="48.0" prefWidth="85.0" text="GO" />
+                                    <VBox layoutX="252.0" layoutY="17.0" prefHeight="68.0" prefWidth="174.0" spacing="5.0">
+                                       <children>
+                                          <Label prefHeight="25.0" prefWidth="68.0" text="to" />
+                                          <DatePicker fx:id="dTo" prefHeight="31.0" prefWidth="174.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </Pane>
+                              <TableView fx:id="tabStats" prefHeight="261.0" prefWidth="828.0">
+                                 <columns>
+                                    <TableColumn fx:id="cId" prefWidth="28.0" text="id" visible="false" />
+                                    <TableColumn fx:id="cIdPlayer" prefWidth="28.0" text="idPlayer" visible="false" />
+                                    <TableColumn fx:id="cDate" prefWidth="71.0" text="Date" />
+                                    <TableColumn fx:id="cOppenent" prefWidth="74.0" text="Oppenent" />
+                                    <TableColumn fx:id="cTimeGame" prefWidth="103.0" text="Time game(min)" />
+                                    <TableColumn fx:id="cFG" prefWidth="97.0" text="Fields Goals (%)" />
+                                    <TableColumn fx:id="cAccuracy" minWidth="0.0" prefWidth="139.0" text="Accuracy downtown(%)" />
+                                    <TableColumn fx:id="cPoints" minWidth="0.0" prefWidth="40.0" text="Points" />
+                                    <TableColumn fx:id="cRebounds" prefWidth="61.0" text="Rebounds" />
+                                    <TableColumn fx:id="cAssists" minWidth="0.0" prefWidth="42.0" text="Assists" />
+                                    <TableColumn fx:id="cBLocks" minWidth="0.0" prefWidth="42.0" text="Blocks" />
+                                    <TableColumn fx:id="cSteals" minWidth="0.0" prefWidth="39.0" text="Steals" />
+                                    <TableColumn fx:id="cScore" minWidth="0.0" prefWidth="48.0" text="Score" />
+                                    <TableColumn fx:id="cResults" minWidth="0.0" prefWidth="56.0" text="Winner??" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ComboBox fx:id="comboSearch" editable="true" layoutX="619.0" layoutY="60.0" onAction="#fillPage" prefHeight="25.0" prefWidth="249.0" />
+      <Label layoutX="619.0" layoutY="36.0" prefHeight="17.0" prefWidth="120.0" text="Select player" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</Pane>

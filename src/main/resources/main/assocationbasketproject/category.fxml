@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.assocationbasketproject.Category">
+   <children>
+      <TableView fx:id="tabPlayers" editable="true" layoutX="14.0" layoutY="273.0" prefHeight="427.0" prefWidth="640.0">
+         <columns>
+            <TableColumn fx:id="cId" visible="false" />
+            <TableColumn fx:id="cName" prefWidth="239.0" text="Player name" />
+            <TableColumn fx:id="cPosition" prefWidth="146.0" text="Position" />
+            <TableColumn fx:id="cAge" minWidth="3.0" prefWidth="57.0" text="Age" />
+            <TableColumn fx:id="cIsAvailable" prefWidth="100.0" text="isAvalaible" />
+            <TableColumn fx:id="cIsHurt" prefWidth="96.0" text="isHurt" />
+
+         </columns>
+      </TableView>
+      <VBox layoutX="663.0" layoutY="273.0" prefHeight="377.0" prefWidth="210.0" spacing="4.0">
+         <children>
+            <AnchorPane prefHeight="58.0" prefWidth="169.0">
+               <children>
+                  <Button fx:id="btnAddCategory" layoutX="72.0" layoutY="17.0" mnemonicParsing="false" onAction="#addCategory" prefHeight="58.0" prefWidth="195.0" text="Add Category" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="58.0" prefWidth="169.0">
+               <children>
+                  <Button fx:id="btnUpdateCategory" layoutX="72.0" layoutY="17.0" mnemonicParsing="false" onAction="#updateCategory" prefHeight="58.0" prefWidth="195.0" text="update Category" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="68.0" prefHeight="58.0" prefWidth="169.0">
+               <children>
+                  <Button fx:id="btnDeleteCategory" layoutX="72.0" layoutY="17.0" mnemonicParsing="false" onAction="#deleteCategory" prefHeight="58.0" prefWidth="195.0" text="Delete Category" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="184.0" prefHeight="58.0" prefWidth="169.0">
+               <children>
+                  <Button fx:id="btnUpdateTeam" layoutX="72.0" layoutY="17.0" mnemonicParsing="false" onAction="#updateTeam" prefHeight="58.0" prefWidth="195.0" text="Update Team" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="242.0" prefHeight="58.0" prefWidth="169.0">
+               <children>
+                  <Button fx:id="btnDeleteTeam" layoutX="72.0" layoutY="17.0" mnemonicParsing="false" onAction="#deleteTeam" prefHeight="52.0" prefWidth="195.0" text="Delete Team" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="220.0" prefWidth="859.0" style="-fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5;">
+         <children>
+            <HBox layoutX="14.0" layoutY="14.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="91.0" text="Category name" />
+                  <ComboBox fx:id="cbCategory" onAction="#changeCategory" prefHeight="32.0" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <Label layoutX="14.0" layoutY="54.0" prefHeight="32.0" prefWidth="91.0" text="Team name" />
+            <Label fx:id="lName" layoutX="123.0" layoutY="54.0" prefHeight="32.0" prefWidth="150.0" />
+            <Label layoutX="14.0" layoutY="134.0" prefHeight="32.0" prefWidth="91.0" text="Gender" />
+            <Label fx:id="lGender" layoutX="123.0" layoutY="134.0" prefHeight="32.0" prefWidth="150.0" />
+            <Label layoutX="14.0" layoutY="94.0" prefHeight="32.0" prefWidth="91.0" text="Creation date" />
+            <Label fx:id="lDate" layoutX="123.0" layoutY="94.0" prefHeight="32.0" prefWidth="150.0" />
+            <TextArea fx:id="lStory" editable="false" layoutX="305.0" layoutY="13.0" prefHeight="203.0" prefWidth="546.0" style="-fx-background-color: gray;" text="Story of  category&#10;&#10;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac mauris vel lacus posuere&#10; consectetur. Aliquam tincidunt velit auctor nisl suscipit, vel dapibus libero fermentum. &#10;Suspendisse potenti. Fusce feugiat, nulla vel fermentum tincidunt, libero turpis ultricies &#10;tellus, at efficitur ex ligula sed sem. Duis vel sapien eu orci cursus aliquet. Curabitur  dolor&#10; nec justo convallis dapibus vel sit amet felis. Vestibulum euismod diam vitae libero cursus, &#10;in consequat neque consectetur. Nullam dapibus ultricies metus vel gravida. Vivamus eget&#10; ultricies justo. Integer nec rhoncus ex.&quot;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextArea>
+         </children>
+      </Pane>
+      <HBox layoutX="24.0" layoutY="238.0" prefHeight="32.0" prefWidth="261.0" spacing="20.0">
+         <children>
+            <Label prefHeight="32.0" prefWidth="91.0" text="Team name" />
+            <ComboBox fx:id="cbTeam" onAction="#fillTab" prefHeight="34.0" prefWidth="150.0" />
+         </children>
+      </HBox>
+   </children>
+</Pane>

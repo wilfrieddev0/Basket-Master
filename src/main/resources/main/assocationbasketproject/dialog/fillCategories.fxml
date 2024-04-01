@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="450.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.assocationbasketproject.dialog.FillCategory">
+   <content>
+      <AnchorPane prefHeight="454.0" prefWidth="490.0">
+         <children>
+            <VBox layoutX="16.0" layoutY="45.0" prefHeight="444.0" prefWidth="527.0" spacing="10.0">
+               <children>
+                  <Pane prefHeight="179.0" prefWidth="430.0" style="-fx-border-style: solid; -fx-border-color: gray; -fx-border-radius: 5;">
+                     <children>
+                        <HBox layoutX="4.0" layoutY="13.0" spacing="5.0">
+                           <children>
+                              <HBox spacing="20.0">
+                                 <children>
+                                    <VBox spacing="20.0">
+                                       <children>
+                                          <Label prefHeight="17.0" prefWidth="98.0" text="Name" />
+                                          <Label prefHeight="17.0" prefWidth="98.0" text="Date Creation" />
+                                          <Label prefHeight="17.0" prefWidth="98.0" text="gender" />
+                                          <Label prefHeight="17.0" prefWidth="83.0" text="Age Range" />
+                                       </children>
+                                    </VBox>
+                                    <VBox spacing="10.0">
+                                       <children>
+                                          <TextField fx:id="fName" onMouseEntered="#newEvent" />
+                                          <DatePicker fx:id="fDate" />
+                                          <ComboBox fx:id="cbGender" prefWidth="150.0" />
+                                          <HBox spacing="15.0">
+                                             <children>
+                                                <TextField fx:id="fMinAge" prefHeight="25.0" prefWidth="47.0" />
+                                                <Label prefHeight="17.0" prefWidth="26.0" text="and " />
+                                                <TextField fx:id="fMaxAge" prefHeight="25.0" prefWidth="47.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="130.0" prefWidth="218.0" spacing="5.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
+                                 <children>
+                                    <Label text="Story" />
+                                    <TextArea fx:id="fStory" prefHeight="108.0" prefWidth="153.0" style="-fx-border-color: white;" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Hyperlink layoutX="424.0" layoutY="154.0" text="Save your titles" />
+                     </children>
+                  </Pane>
+                  <Label text="Teams" />
+                  <HBox spacing="7.0">
+                     <children>
+                        <TableView fx:id="teamTable" editable="true" prefHeight="187.0" prefWidth="432.0">
+                          <columns>
+                             <TableColumn fx:id="cid" text="id" visible="false" />
+                             <TableColumn fx:id="cName" prefWidth="126.0" text="Team name" />
+                             <TableColumn fx:id="cGamePriority" prefWidth="147.0" text="Game priotity" />
+                              <TableColumn fx:id="cGamePlan" prefWidth="139.0" text="GamePlan" />
+                          </columns>
+                        </TableView>
+                        <VBox prefHeight="59.0" prefWidth="82.0" spacing="3.0">
+                           <children>
+                              <AnchorPane layoutX="10.0" layoutY="39.0" prefHeight="26.0" prefWidth="82.0">
+                                 <children>
+                                    <Button layoutX="22.0" layoutY="2.0" mnemonicParsing="false" onAction="#addTeam" prefHeight="44.0" prefWidth="82.0" text="Add Team" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="26.0" prefWidth="82.0">
+                                 <children>
+                                    <Button layoutX="22.0" layoutY="2.0" mnemonicParsing="false" onAction="#fillTeam" prefHeight="44.0" prefWidth="82.0" text="Fill team" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="36.0" prefHeight="26.0" prefWidth="82.0">
+                                 <children>
+                                    <Button layoutX="22.0" layoutY="2.0" mnemonicParsing="false" onAction="#deleteTeam" prefHeight="44.0" prefWidth="82.0" text="Delete Team" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="97.0" prefHeight="26.0" prefWidth="82.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#undo" prefHeight="44.0" prefWidth="82.0" text="undo" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="68.0" prefHeight="26.0" prefWidth="82.0">
+                                 <children>
+                                    <Button layoutX="22.0" layoutY="2.0" mnemonicParsing="false" onAction="#deleteAll" prefHeight="44.0" prefWidth="82.0" text="Clear" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="463.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="109.0" text="Cancel" />
+                        <Button fx:id="btnSave" disable="true" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="109.0" text="Save" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="215.0" right="2.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="177.0" layoutY="9.0" prefHeight="27.0" prefWidth="156.0" text="Fill Category infos">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
+   <graphic>
+      <AnchorPane prefHeight="530.0" prefWidth="145.0" />
+   </graphic>
+</DialogPane>

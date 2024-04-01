@@ -1,0 +1,36 @@
+.cover-image {
+    -fx-background-size: cover;
+    -fx-background-position: center top;
+    -fx-background-repeat: no-repeat;
+    -fx-background-radius: 100%;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+.box{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+.cardDay{
+    -fx-background-color: lightblue;
+    -fx-padding: 10;
+    -fx-font-size: 10;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-transition: transform 0.3s;
+}
+.tableView{
+    -fx-border-style:solid;
+    -fx-border-color:gray;
+    -fx-border-radius:5px;
+}
+.pane{
+    -fx-border-style:solid;
+    -fx-border-color:lightblue;
+    -fx-border-width: 0 0 0 5;
+}
+.borderPane{
+    -fx-border-style:solid;
+    -fx-border-color: red;
+    -fx-border-width: 0 0 0 5;
+}
+.root {
+    -fx-padding: 10;
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="pane" prefHeight="734.0" prefWidth="887.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.assocationbasketproject.Statistics">
+   <opaqueInsets>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </opaqueInsets>
+   <children>
+      <VBox layoutX="30.0" prefHeight="57.0" prefWidth="148.0">
+         <children>
+            <Label prefHeight="28.0" prefWidth="124.0" text="Category">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ComboBox fx:id="cbCategory" onAction="#changeCategory" prefHeight="40.0" prefWidth="247.0" style="-fx-background-color: inherit;" />
+         </children>
+      </VBox>
+      <LineChart fx:id="chartScale" alternativeRowFillVisible="false" axisSortingPolicy="Y_AXIS" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" layoutX="30.0" layoutY="59.0" legendSide="RIGHT" prefHeight="342.0" prefWidth="547.0" style="-fx-border-color: gray; -fx-border-radius: 5;" title="Evolution gloable (Score en fonction des matchs) " titleSide="BOTTOM" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <VBox layoutX="586.0" layoutY="59.0" prefHeight="342.0" prefWidth="299.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="169.0" prefWidth="299.0" style="-fx-border-color: gray; -fx-border-radius: 5 5 0 0;">
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="lMatch" alignment="CENTER" contentDisplay="CENTER" prefHeight="68.0" prefWidth="88.0" text="80">
+                           <font>
+                              <Font name="System Bold" size="52.0" />
+                           </font>
+                        </Label>
+                        <Label text="matchs" />
+                     </children>
+                  </VBox>
+                  <ProgressIndicator fx:id="progressMatch" disable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="147.0" prefWidth="211.0" progress="0.61" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="174.0" prefWidth="299.0" style="-fx-border-color: gray; -fx-border-radius: 0 0 5 5; -fx-border-width: 0 1 1 1;">
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="lPoints" alignment="CENTER" contentDisplay="CENTER" prefHeight="68.0" prefWidth="88.0" text="700">
+                           <font>
+                              <Font name="System Bold" size="49.0" />
+                           </font>
+                        </Label>
+                        <Label text="points" />
+                     </children>
+                  </VBox>
+                  <ProgressIndicator fx:id="progressPoints" disable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="211.0" progress="0.62" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="30.0" layoutY="415.0" prefHeight="318.0" prefWidth="855.0" style="-fx-border-color: gray; -fx-border-radius: 5 5 0 0;">
+         <children>
+            <VBox alignment="TOP_RIGHT">
+               <children>
+                  <VBox prefHeight="68.0" prefWidth="148.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="124.0" text="Team" />
+                        <ComboBox fx:id="cbTeam" onAction="#fillChartTeam" prefHeight="40.0" prefWidth="247.0" style="-fx-background-color: inherit;" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="68.0" prefWidth="148.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="124.0" text="Stat">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cbStats" onAction="#fillChartTeam" prefHeight="40.0" prefWidth="247.0" style="-fx-background-color: inherit;" />
+                     </children>
+                  </VBox>
+                  <Button mnemonicParsing="false" onAction="#fillChartTeam" prefHeight="43.0" prefWidth="56.0" text="Refresh" />
+               </children>
+            </VBox>
+            <BarChart fx:id="chartTeam" alternativeColumnFillVisible="true" alternativeRowFillVisible="false" barGap="5.0" categoryGap="5.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" legendSide="LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="318.0" prefWidth="711.0" title="Stat en fonction des joueurs" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </BarChart>
+         </children>
+      </HBox>
+   </children>
+</Pane>

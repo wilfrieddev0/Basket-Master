@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.assocationbasketproject.LogonController">
+   <children>
+      <SplitPane dividerPositions="0.11401098901098901" orientation="VERTICAL" prefHeight="730.0" prefWidth="750.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="71.0" prefWidth="826.0">
+               <children>
+                  <Hyperlink layoutX="14.0" layoutY="43.0" onAction="#LinkHaveAccount" prefHeight="24.0" prefWidth="169.0" text="I already have  an account" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="204.0" layoutY="11.0" prefHeight="63.0" prefWidth="419.0" text="Sign up ">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <StackPane layoutX="735.0" layoutY="7.0" prefHeight="72.0" prefWidth="77.0">
+                     <children>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="AgreeTerms" cache="true" cacheHint="SPEED" minHeight="0.0" minWidth="0.0" prefHeight="653.0" prefWidth="826.0">
+               <children>
+                  <PasswordField fx:id="fPassword" layoutX="67.0" layoutY="318.0" onKeyPressed="#checkPassword" onKeyTyped="#checkPassword" onMouseClicked="#handleField" prefHeight="26.0" prefWidth="223.0" />
+                  <TextField fx:id="fLastName" layoutX="66.0" layoutY="145.0" onKeyPressed="#handleText" onKeyTyped="#handleText" onMouseClicked="#handleField" prefHeight="26.0" prefWidth="223.0" />
+                  <Label layoutX="66.0" layoutY="128.0" text="Last name" />
+                  <TextField fx:id="fName" layoutX="66.0" layoutY="92.0" onKeyTyped="#handleText" onMouseClicked="#handleField" prefHeight="26.0" prefWidth="223.0" />
+                  <Label layoutX="66.0" layoutY="71.0" text="First name" />
+                  <TextField fx:id="fLogin" layoutX="67.0" layoutY="263.0" onKeyPressed="#handleText" onKeyTyped="#handleText" onMouseClicked="#handleField" prefHeight="26.0" prefWidth="223.0" AnchorPane.bottomAnchor="371.0" />
+                  <Label layoutX="66.0" layoutY="239.0" text="Login" />
+                  <Button layoutX="483.0" layoutY="362.0" mnemonicParsing="false" onAction="#uploadProfile" prefHeight="30.0" prefWidth="139.0" text="upload your profile" />
+                  <RadioButton fx:id="intAgree" layoutX="74.0" layoutY="594.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="91.0" text="I agree terms" />
+                  <TextField fx:id="fEmail" cache="true" cacheHint="QUALITY" layoutX="66.0" layoutY="191.0" onKeyPressed="#checkInputEmail" onKeyTyped="#checkInputEmail" onMouseClicked="#handleField" prefHeight="26.0" prefWidth="223.0" />
+                  <Label layoutX="66.0" layoutY="174.0" text="Email" />
+                  <Separator layoutX="110.0" layoutY="239.0" prefHeight="3.0" prefWidth="130.0" />
+                  <PasswordField fx:id="fConfirm" layoutX="67.0" layoutY="368.0" onAction="#confirmPassword" onKeyPressed="#confirmPassword" onKeyTyped="#confirmPassword" onMouseClicked="#handleField" prefHeight="26.0" prefWidth="223.0" />
+                  <Label layoutX="66.0" layoutY="344.0" text="Confirm" />
+                  <Button layoutX="377.0" layoutY="592.0" mnemonicParsing="false" onAction="#Discard" prefHeight="30.0" prefWidth="139.0" text="Cancel" />
+                  <Button fx:id="btnSignUp" disable="true" layoutX="589.0" layoutY="592.0" mnemonicParsing="false" onAction="#signUp" prefHeight="30.0" prefWidth="139.0" text="Sign up and sign in" />
+                  <Group layoutX="335.0" layoutY="420.0" />
+                  <Label layoutX="68.0" layoutY="297.0" text="password" />
+                  <Circle fx:id="circleProfile" cache="true" cacheHint="QUALITY" fill="WHITE" focusTraversable="true" layoutX="554.0" layoutY="204.0" radius="136.0" strokeType="INSIDE">
+                     <stroke>
+                        <RadialGradient centerX="0.5" centerY="0.509478672985782" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Circle>
+                  <Pane layoutX="69.0" layoutY="438.0" prefHeight="120.0" prefWidth="665.0" style="-fx-border-style: solid; -fx-border-radius: 5;" styleClass="box">
+                     <children>
+                        <PasswordField fx:id="intCodeCheck" layoutX="565.0" layoutY="14.0" onAction="#handleText" prefHeight="26.0" prefWidth="80.0" />
+                        <Group layoutX="14.0" layoutY="13.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="208.0" text="Enter a code " />
+                           </children>
+                        </Group>
+                        <Button layoutX="14.0" layoutY="75.0" mnemonicParsing="false" onAction="#SendEmailCode" prefHeight="30.0" prefWidth="80.0" text="Send code " />
+                        <Button fx:id="btnSubmit" disable="true" layoutX="565.0" layoutY="76.0" mnemonicParsing="false" onAction="#CheckEmail" prefHeight="30.0" prefWidth="80.0" text="Submit" />
+                        <Pane layoutX="8.0" layoutY="-18.0" prefHeight="27.0" prefWidth="152.0" style="-fx-background-color: transparent;">
+                           <children>
+                              <Label layoutX="34.0" layoutY="5.0" style="-fx-background-color: white;" text="Email checking">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label fx:id="labelTrace" alignment="CENTER" layoutX="12.0" layoutY="45.0" prefHeight="24.0" prefWidth="304.0" textAlignment="CENTER">
+                           <textFill>
+                              <LinearGradient endX="0.7014218009478672" endY="1.0" startX="0.7014218009478673" startY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.9342105388641357" green="0.02162524312734604" blue="0.02162524312734604" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</StackPane>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+
+<DialogPane prefHeight="644.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.assocationbasketproject.dialog.FillTeam">
+   <graphic>
+      <StackPane onMouseClicked="#editPlayer" prefHeight="640.0" prefWidth="154.0" style="-fx-border-color: gray; -fx-border-width: 0 5 0 0;" />
+   </graphic>
+   <content>
+      <AnchorPane prefHeight="697.0" prefWidth="761.0">
+         <children>
+            <HBox layoutX="9.0" layoutY="137.0" prefHeight="356.0" prefWidth="744.0" spacing="15.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
+               <children>
+                  <VBox prefHeight="241.0" prefWidth="349.0" spacing="15.0">
+                     <children>
+                        <ComboBox fx:id="cbGender" disable="true" prefWidth="150.0" />
+                        <VBox spacing="5.0">
+                           <children>
+                              <HBox spacing="50.0">
+                                 <children>
+                                    <Label text="First Name" />
+                                    <TextField fx:id="fFName" onMouseEntered="#formatField" prefHeight="25.0" prefWidth="201.0">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox spacing="50.0">
+                                 <children>
+                                    <Label text="Last Name" />
+                                    <TextField fx:id="fLName" onMouseEntered="#formatField" prefHeight="25.0" prefWidth="202.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets right="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox spacing="77.0">
+                                 <children>
+                                    <Label text="Email" />
+                                    <TextField fx:id="fEmail" onMouseEntered="#formatField" prefHeight="25.0" prefWidth="201.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox spacing="81.0">
+                           <children>
+                              <Label text="Birth" />
+                              <DatePicker fx:id="dBirth" prefHeight="25.0" prefWidth="137.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="31.0" prefWidth="335.0" spacing="63.0">
+                           <children>
+                              <Label text="Position " />
+                              <ComboBox fx:id="cbPosition" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                        <VBox spacing="5.0">
+                           <children>
+                              <HBox spacing="80.0">
+                                 <children>
+                                    <Label text="Phone" />
+                                    <HBox>
+                                       <children>
+                                          <TextField fx:id="fPhone" onMouseEntered="#formatField" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="114.0" text="Emergency phone" />
+                                    <HBox>
+                                       <children>
+                                          <TextField fx:id="fEPhone" onMouseEntered="#formatField" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox>
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="114.0" text="Height / Weight" />
+                              <HBox prefHeight="25.0" prefWidth="193.0" spacing="15.0">
+                                 <children>
+                                    <TextField fx:id="fHeight" onMouseEntered="#formatField" prefHeight="25.0" prefWidth="63.0" />
+                                    <TextField fx:id="fWeight" layoutX="10.0" layoutY="10.0" onMouseEntered="#formatField" prefHeight="25.0" prefWidth="60.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_RIGHT" prefHeight="304.0" prefWidth="369.0" spacing="5.0">
+                     <children>
+                        <VBox prefHeight="309.0" prefWidth="366.0" spacing="15.0">
+                           <children>
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <Circle fx:id="circleProfile" fill="WHITE" onMouseClicked="#addProfile" radius="67.0" strokeType="INSIDE">
+                                       <effect>
+                                          <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" width="5.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                       <stroke>
+                                          <RadialGradient centerX="0.48895027624309395" centerY="0.5" radius="0.5">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.11999999731779099" green="1.0" blue="0.8072381019592285" opacity="0.0" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </RadialGradient>
+                                       </stroke>
+                                    </Circle>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                                 <effect>
+                                    <DropShadow height="5.0" radius="2.0" spread="0.08" width="5.0" />
+                                 </effect>
+                              </StackPane>
+                              <Pane prefHeight="66.0" prefWidth="369.0">
+                                 <children>
+                                    <Button layoutX="117.0" layoutY="1.0" mnemonicParsing="false" onAction="#addProfile" text="upLoader votre profile" />
+                                 </children>
+                              </Pane>
+                              <HBox prefHeight="119.0" prefWidth="369.0">
+                                 <children>
+                                    <Label text="Description       " />
+                                    <TextArea fx:id="fDesc" prefHeight="50.0" prefWidth="282.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <TextField fx:id="fIdMedia" disable="true" editable="false" prefHeight="25.0" prefWidth="397.0" visible="false" />
+                           </children>
+                        </VBox>
+                        <HBox>
+                           <children>
+                              <TextField fx:id="fId" disable="true" prefHeight="25.0" prefWidth="297.0" text="0" visible="false" />
+                              <Button mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="70.0" text="add" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Button layoutX="525.0" layoutY="655.0" mnemonicParsing="false" onAction="#cancel" prefHeight="31.0" prefWidth="98.0" text="Cancel" />
+            <Button layoutX="658.0" layoutY="655.0" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="95.0" text="Save" />
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="124.0" prefWidth="518.0">
+               <children>
+                  <Label text="Category" />
+                  <Label fx:id="lName" layoutX="163.0" text="Specimen" />
+                  <Label layoutY="23.0" text="Team" />
+                  <Label fx:id="lTeam" layoutX="163.0" layoutY="23.0" text="Team A" />
+                  <Label layoutY="61.0" text="Strategy" />
+                  <Label fx:id="lGamePlan" layoutX="163.0" layoutY="61.0" text="Offensive" />
+                  <Label layoutY="42.0" text="Gender" />
+                  <Label fx:id="lGender" layoutX="163.0" layoutY="42.0" text="Masculin" />
+                  <Label layoutY="83.0" text="Game priority" />
+                  <Label fx:id="lGamePriority" layoutX="163.0" layoutY="83.0" text="Main" />
+                  <Label layoutY="102.0" text="Date Creation" />
+                  <Label fx:id="lDate" layoutX="163.0" layoutY="102.0" text="14 / 12 /  2023" />
+               </children>
+            </Pane>
+            <HBox layoutX="10.0" layoutY="497.0" prefHeight="151.0" prefWidth="742.0" spacing="32.0">
+               <children>
+                  <TableView fx:id="tabPlayer" editable="true" prefHeight="151.0" prefWidth="642.0">
+                    <columns>
+                       <TableColumn fx:id="cId" prefWidth="63.0" text="id" visible="false" />
+                       <TableColumn fx:id="cIdTeam" prefWidth="63.0" text="idTeam" visible="false" />
+                       <TableColumn fx:id="cFirstName" prefWidth="63.0" text="Fisrt name" />
+                        <TableColumn fx:id="cLastName" prefWidth="83.0" text="Last Name" />
+                        <TableColumn fx:id="cEmail" prefWidth="63.0" text="Email" />
+                        <TableColumn fx:id="cBirthDay" prefWidth="55.0" text="Birthday" />
+                        <TableColumn fx:id="cPhone" prefWidth="41.0" text="Phone" />
+                        <TableColumn fx:id="cPhoneEmergency" prefWidth="58.0" text="EmergencyPhone" />
+                        <TableColumn fx:id="cHeight" minWidth="0.0" prefWidth="0.0" text="Height" />
+                        <TableColumn fx:id="cWeight" prefWidth="74.0" text="Weight" />
+                        <TableColumn fx:id="cPosition" prefWidth="39.0" text="Position" />
+                        <TableColumn fx:id="cDescription" prefWidth="69.0" text="Description" />
+                       <TableColumn fx:id="cIdMedia" prefWidth="31.0" text="idMedia" />
+                       <TableColumn fx:id="cPathProfile" prefWidth="55.0" text="Path Profile" />
+                    </columns>
+                  </TableView>
+                  <VBox prefHeight="151.0" prefWidth="88.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="btnFill" mnemonicParsing="false" onAction="#formatInFields" prefHeight="26.0" prefWidth="88.0" text="FIll in the fieds" />
+                        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#delete" prefHeight="28.0" prefWidth="84.0" text="Delete" />
+                        <Button fx:id="btnUndo" layoutX="10.0" layoutY="43.0" mnemonicParsing="false" onAction="#undo" prefHeight="28.0" prefWidth="84.0" text="undo" />
+                        <Button fx:id="btnClear" layoutX="10.0" layoutY="76.0" mnemonicParsing="false" onAction="#deleteAll" prefHeight="28.0" prefWidth="84.0" text="Clear" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </content>
+</DialogPane>

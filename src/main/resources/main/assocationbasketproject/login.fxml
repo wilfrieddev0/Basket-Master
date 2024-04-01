@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.assocationbasketproject.LoginController">
+   <children>
+      <SplitPane dividerPositions="0.4563380281690141" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="745.0">
+         <items>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <StackPane id="westStack" layoutX="30.0" layoutY="100.0" prefHeight="537.0" prefWidth="312.0" style="-fx-border-style: solid; -fx-border-color: white; -fx-border-radius: 20;" stylesheets="@style/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="imageBack" fitHeight="618.0" fitWidth="337.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Image/R.jpeg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+            <Pane prefHeight="588.0" prefWidth="404.0">
+               <children>
+                  <Region fx:id="LinkHome" layoutX="278.0" layoutY="8.0" prefHeight="55.0" prefWidth="58.0">
+                     <opaqueInsets>
+                        <Insets bottom="3.0" right="3.0" />
+                     </opaqueInsets>
+                     <effect>
+                        <Glow level="0.57">
+                           <input>
+                              <Shadow />
+                           </input>
+                        </Glow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="NONE" />
+                     </cursor>
+                  </Region>
+                  <Button layoutX="149.0" layoutY="360.0" mnemonicParsing="false" onAction="#btnConnecter" prefHeight="37.0" prefWidth="101.0" text="Me connecter">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+                  <RadioButton fx:id="IntAgree" layoutX="74.0" layoutY="324.0" mnemonicParsing="false" onAction="#saveCredentials" text="Enregister mes informations " />
+                  <PasswordField fx:id="inputPassword" layoutX="74.0" layoutY="231.0" prefHeight="25.0" prefWidth="251.0" />
+                  <TextField fx:id="inpuLogin" layoutX="71.0" layoutY="175.0" prefHeight="25.0" prefWidth="251.0" />
+                  <Label layoutX="74.0" layoutY="148.0" prefHeight="17.0" prefWidth="101.0" text="Login">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Label>
+                  <Label layoutX="74.0" layoutY="207.0" prefHeight="17.0" prefWidth="101.0" text="Password">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Label>
+                  <Hyperlink layoutX="69.0" layoutY="277.0" onAction="#LinkMdpOublié" prefHeight="24.0" prefWidth="134.0" text="Mot de passe oublié ?" />
+                  <Hyperlink layoutX="69.0" layoutY="300.0" onAction="#linkPasCompte" prefHeight="23.0" prefWidth="182.0" text="Je n'ai pas de compte" />
+                  <Label fx:id="labelTrace" alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="81.0" onDragDetected="#saveCredentials" prefHeight="68.0" prefWidth="302.0" textAlignment="JUSTIFY" textFill="#ff0404">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Label>
+                  <Separator layoutX="81.0" layoutY="410.0" prefWidth="200.0" />
+                  <Label layoutX="344.0" layoutY="564.0" text="by landry">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <StackPane layoutX="270.0" layoutY="13.0" prefHeight="68.0" prefWidth="74.0" />
+                  <ImageView fitHeight="76.0" fitWidth="74.0" layoutX="312.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/IMG-20240319-WA0025.jpg" />
+                     </image>
+                  </ImageView>
+                  <StackPane layoutX="69.0" layoutY="445.0" prefHeight="74.0" prefWidth="74.0" />
+               </children>
+               <opaqueInsets>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Pane>
+         </items>
+      </SplitPane>
+   </children>
+</StackPane>

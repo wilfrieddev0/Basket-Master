@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<DialogPane prefHeight="491.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.assocationbasketproject.dialog.FillNewEvent">
+   <content>
+      <AnchorPane prefHeight="479.0" prefWidth="498.0">
+         <children>
+            <VBox layoutX="59.0" layoutY="141.0">
+               <children>
+                  <Label text="Date / Time" />
+                  <HBox alignment="CENTER" prefHeight="36.0" prefWidth="403.0" spacing="110.0">
+                     <children>
+                        <DatePicker fx:id="datePicker" prefHeight="35.0" prefWidth="174.0" />
+                        <HBox fx:id="hBox" alignment="CENTER" prefHeight="36.0" prefWidth="119.0" spacing="3.0">
+                           <children>
+                              <ComboBox fx:id="cbHours" prefHeight="33.0" prefWidth="60.0" />
+                              <ComboBox fx:id="cbMinutes" layoutX="11.0" layoutY="11.0" prefHeight="33.0" prefWidth="60.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="btnSave" layoutX="312.0" layoutY="433.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="151.0" text="Save" />
+            <Button layoutX="59.0" layoutY="433.0" mnemonicParsing="false" onAction="#cancel" prefHeight="31.0" prefWidth="174.0" text="Cancel" />
+            <Label layoutX="59.0" layoutY="14.0" prefHeight="55.0" prefWidth="404.0" text="Label" />
+            <HBox layoutX="58.0" layoutY="69.0" prefHeight="53.0" prefWidth="406.0" spacing="22.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Type of event " />
+                        <ComboBox fx:id="cbEvents" prefHeight="36.0" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="53.0" prefWidth="139.0">
+                     <children>
+                        <Label text="Team" />
+                        <ComboBox fx:id="cbTeams" prefHeight="36.0" prefWidth="136.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="53.0" prefWidth="137.0" spacing="3.0">
+                     <children>
+                        <Label text="Importance of event " />
+                        <ChoiceBox fx:id="cbImportance" prefHeight="33.0" prefWidth="109.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox layoutX="59.0" layoutY="198.0" prefHeight="47.0" prefWidth="401.0" spacing="65.0">
+               <children>
+                  <VBox prefHeight="47.0" prefWidth="169.0" spacing="5.0">
+                     <children>
+                        <Label text="Subject /Oppenent" />
+                        <TextField fx:id="fSubject" onMouseEntered="#formatFields" prefHeight="25.0" prefWidth="159.0" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="47.0" prefWidth="253.0" spacing="5.0">
+                     <children>
+                        <Label text="Location" />
+                        <ComboBox fx:id="comboLocation" editable="true" prefHeight="25.0" prefWidth="211.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox layoutX="59.0" layoutY="257.0" spacing="5.0">
+               <children>
+                  <Label text="Description" />
+                  <TextArea fx:id="fDesc" prefHeight="146.0" prefWidth="404.0" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </content>
+   <graphic>
+      <AnchorPane prefHeight="500.0" prefWidth="200.0" />
+   </graphic>
+</DialogPane>

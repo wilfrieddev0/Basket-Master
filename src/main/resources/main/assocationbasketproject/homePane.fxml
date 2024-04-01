@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane id="pane" prefHeight="734.0" prefWidth="887.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.assocationbasketproject.HomePane">
+   <children>
+      <DatePicker fx:id="datePicker" editable="false" layoutX="103.0" layoutY="1.0" prefHeight="30.0" prefWidth="682.0" showWeekNumbers="true">
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+      </DatePicker>
+      <TabPane layoutX="3.0" layoutY="476.0" prefHeight="258.0" prefWidth="881.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Planned">
+               <content>
+                  <AnchorPane prefHeight="275.0" prefWidth="864.0">
+                     <children>
+                        <HBox layoutX="293.0" layoutY="27.0" prefHeight="242.0" prefWidth="881.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label prefHeight="46.0" prefWidth="236.0" text="Match and Training" textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView id="tableView" fx:id="tabMatch" prefHeight="197.0" prefWidth="356.0">
+                                       <columns>
+                                          <TableColumn fx:id="idColumn" prefWidth="24.0" text="ID" visible="false" />
+                                          <TableColumn fx:id="dateColumn" prefWidth="100.0" text="Date " />
+                                          <TableColumn fx:id="opponentColumn" minWidth="0.0" prefWidth="105.0" text="Opponent" />
+                                          <TableColumn fx:id="commentColumn" minWidth="0.0" prefWidth="122.0" text="Comments" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="35.0" layoutY="73.0" prefHeight="121.0" prefWidth="125.0" spacing="4.0">
+                                       <children>
+                                          <AnchorPane prefHeight="56.0" prefWidth="125.0">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#addEvent" prefHeight="56.0" prefWidth="125.0" text="New " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="56.0" prefWidth="125.0">
+                                             <children>
+                                                <Button fx:id="btnClose" layoutX="37.0" layoutY="16.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="56.0" prefWidth="125.0" text="Close" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="66.0" prefHeight="56.0" prefWidth="125.0">
+                                             <children>
+                                                <Button fx:id="btnFillStats" layoutX="37.0" layoutY="16.0" mnemonicParsing="false" onAction="#fillStats" prefHeight="56.0" prefWidth="125.0" text="Fill stats" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="56.0" prefWidth="125.0">
+                                             <children>
+                                                <Button fx:id="btnUndo" mnemonicParsing="false" onAction="#undo" prefHeight="56.0" prefWidth="125.0" text="Undo" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="72.0" prefHeight="56.0" prefWidth="125.0">
+                                             <children>
+                                                <Button fx:id="btnUpdate" layoutX="37.0" layoutY="16.0" mnemonicParsing="false" onAction="#updateEvent" prefHeight="56.0" prefWidth="125.0" text="Update" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <VBox>
+                                 <children>
+                                    <Label prefHeight="46.0" prefWidth="250.0" text="Other Events" textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView id="tableView" fx:id="otherTab" prefHeight="196.0" prefWidth="356.0">
+                                       <columns>
+                                          <TableColumn fx:id="oIdColumn" minWidth="9.0" prefWidth="26.0" text="ID" visible="false" />
+                                          <TableColumn fx:id="oDateColumn" prefWidth="111.0" text="Date" />
+                                          <TableColumn fx:id="oSubjectColumn" minWidth="0.0" prefWidth="109.0" text="Subject " />
+                                          <TableColumn fx:id="oCommentColumn" minWidth="0.0" prefWidth="109.0" text="Comment" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Trace">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.24166666666666667" layoutX="288.0" layoutY="14.0" orientation="VERTICAL" prefHeight="242.0" prefWidth="881.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="60.0" prefWidth="744.0">
+                                 <children>
+                                    <Button layoutX="840.0" layoutY="24.0" mnemonicParsing="false" onAction="#search" text="Go" />
+                                    <HBox layoutX="318.0" layoutY="6.0" spacing="3.0">
+                                       <children>
+                                          <VBox spacing="1.0">
+                                             <children>
+                                                <Label text="Date  between" />
+                                                <DatePicker fx:id="dateBegin" prefHeight="25.0" prefWidth="100.0" />
+                                             </children>
+                                          </VBox>
+                                          <VBox spacing="1.0">
+                                             <children>
+                                                <Label text="and" />
+                                                <DatePicker fx:id="dateEnd" prefHeight="25.0" prefWidth="100.0" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox layoutX="7.0" layoutY="4.0" spacing="1.0" />
+                                    <VBox layoutX="177.0" layoutY="5.0" spacing="1.0" />
+                                    <VBox layoutX="618.0" layoutY="5.0" spacing="1.0">
+                                       <children>
+                                          <Label text="close" />
+                                          <ComboBox fx:id="cbClose" prefHeight="25.0" prefWidth="78.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="7.0" layoutY="4.0" prefHeight="44.0" prefWidth="213.0" spacing="2.0">
+                                       <children>
+                                          <Label text="Enter a key word" />
+                                          <TextField fx:id="fKeyWord" prefHeight="25.0" prefWidth="172.0" promptText="Enter Any word related on your search" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="tabSearch" layoutX="172.0" layoutY="14.0" prefHeight="151.0" prefWidth="744.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                         <TableColumn fx:id="cId" visible="false" />
+                                        <TableColumn fx:id="cDate" prefWidth="75.0" text="Date" />
+                                        <TableColumn fx:id="cTime" prefWidth="56.0" text="Time" />
+                                          <TableColumn fx:id="cScheduleAt" prefWidth="97.0" text="scheduled at" />
+                                          <TableColumn fx:id="cType" prefWidth="98.0" text="Type" />
+                                          <TableColumn fx:id="cImportance" prefWidth="78.0" text="Importance" />
+                                          <TableColumn fx:id="cOppenent" prefWidth="122.0" text="Opponent/Subject" />
+                                          <TableColumn fx:id="cDescription" prefWidth="297.0" text="Description" />
+                                          <TableColumn fx:id="cClose" minWidth="0.0" prefWidth="41.0" text="close?" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </opaqueInsets>
+</Pane>
